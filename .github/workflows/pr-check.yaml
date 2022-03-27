@@ -1,0 +1,22 @@
+---
+name: Pre Pull Request Check
+on:
+  pull_request:
+    types: ['opened', 'synchronize']
+    paths:
+      - '.github/**'
+      - '**.go'
+      - '**.tf'
+      - '.github/workflows/**'
+      - '**.md'
+
+jobs:
+  prepr-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: block
+        run: |
+          echo ===> "now sleeping 1m"
+          sleep 1m
