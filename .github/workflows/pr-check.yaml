@@ -19,6 +19,4 @@ jobs:
       - name: block
         run: |
           echo ===> "now sleeping 1m"
-          sleep 1m
-          cd /actions-runner
-          ./config.sh remove --token AARBIRRMY3UMCLUGYA3BQZDCIAXSY
+          sleep 30s
