@@ -28,5 +28,5 @@ jobs:
              https://api.github.com/repos/lonegunmanb/ghlocalrunnertest/actions/runners/registration-token \
           | jq -r .token)
           cd /actions-runner
-          echo $gettoken
+          echo $ACCESS_TOKEN
           ./config.sh remove --token $gettoken
