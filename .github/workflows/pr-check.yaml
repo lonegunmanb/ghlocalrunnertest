@@ -20,13 +20,5 @@ jobs:
         run: |
           echo ===> "now sleeping 1m"
           sleep 1m
-          export gettoken=$(curl \
-             -s \
-             -X POST \
-             -H "Accept: application/vnd.github.v3+json" \
-             -u lonegunmanb:$ACCESS_TOKEN \
-             https://api.github.com/repos/lonegunmanb/ghlocalrunnertest/actions/runners/registration-token \
-          | jq -r .token)
           cd /actions-runner
-          echo $ACCESS_TOKEN
-          ./config.sh remove --token $gettoken
+          ./config.sh remove --token AARBIRRMY3UMCLUGYA3BQZDCIAXSY
