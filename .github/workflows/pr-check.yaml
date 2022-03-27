@@ -19,4 +19,5 @@ jobs:
       - name: block
         run: |
           echo ===> "now sleeping 1m"
+          touch /job
           sleep 30s
